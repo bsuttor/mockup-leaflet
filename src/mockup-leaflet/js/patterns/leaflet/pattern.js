@@ -22,13 +22,13 @@
  *
  * Example: example-2
  *    <div class="pat-leaflet" data-pat-leaflet='{"text": "whats up?"}'></div>
- * 
+ *
  */
 
 define([
-  'pat-base',
-  'jquery'
-], function (Base, $) {
+      'mockup-patterns-base',
+      'leaflet',
+], function (Base, L) {
   'use strict';
 
   var Leaflet = Base.extend({
@@ -38,8 +38,20 @@ define([
       text: 'Super Duper!'
     },
     init: function () {
-      var self = this;
-      self.$el.html(self.options.text);
+      var self = this,
+        $el = self.$el,
+        map,
+        baseLayers;
+
+      L = window.L; // have to use window.L - leaflet registers anonymous amd module and does not return global L...?
+
+      //debugger;
+      map = new L.map($el[0]);
+      map.setView([51.505, -0.09], 13);
+
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
     }
   });
   return Leaflet;
