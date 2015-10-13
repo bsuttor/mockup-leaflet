@@ -21,3 +21,4 @@ stamp-bower
 stamp-npm
 test-results.xml
 var/
+.mr.developer.cfg
