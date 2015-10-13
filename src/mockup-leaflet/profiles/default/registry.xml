@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <registry>
 
+    <records prefix="plone.resources/mockup-bundles-leaflet"
+              interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++leaflet/js/bundles/leaflet.js</value>
+      <value key="css">
+        <element>++plone++leaflet/less/leaflet.less</element>
+      </value>
+    </records>
+
+
   <records prefix="plone.resources/mockup-patterns-leaflet"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="js">++plone++leaflet/patterns/leaflet/pattern.js</value>
@@ -9,21 +18,22 @@
       </value>
   </records>
 
+  <records prefix="plone.resources/leaflet"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++leaflet-dist/leaflet.js</value>
+      <value key="css">
+        <element>++plone++leaflet-dist/leaflet.css</element>
+      </value>
+  </records>
+
   <records prefix="plone.bundles/leaflet"
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>mockup-patterns-leaflet</element>
-      <element>mockup-patterns-select2</element>
+      <element>mockup-bundles-leaflet</element>
     </value>
     <value key="depends">plone</value>
     <value key="enabled">True</value>
     <value key="compile">True</value>
   </records>
-
-
-  <records
-      remove="True"
-      prefix="plone.resources/mockup-bundles-leaflet"
-      interface='Products.CMFPlone.interfaces.IResourceRegistry'/>
 
 </registry>
