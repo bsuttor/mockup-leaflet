@@ -35,19 +35,20 @@ define([
     name: 'leaflet',
     trigger: '.pat-leaflet',  // has to be exact like this: 'pat-' + patternname.
     defaults: {
-      text: 'Super Duper!'
+      mapcenter: [50.636, 5.566],
+      mapzoom: 13
     },
     init: function () {
       var self = this,
         $el = self.$el,
         map,
-        baseLayers;
-
-      L = window.L; // have to use window.L - leaflet registers anonymous amd module and does not return global L...?
+        baseLayers,
+        mapcenter = self.options.mapcenter,
+        mapzoom = self.options.mapzoom;
 
       //debugger;
       map = new L.map($el[0]);
-      map.setView([51.505, -0.09], 13);
+      map.setView(mapcenter, mapzoom);
 
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
