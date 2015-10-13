@@ -5,6 +5,17 @@ http://leafletjs.com/
 
 This is a Leaflet pattern for mockup. This package build from https://github.com/collective/mockup-minimalpattern
 
+Options
+-------
+
+You can use options like this::
+
+<div class="pat-leaflet"
+     data-pat-leaflet="mapzoom: 12;
+                       mapcenterlat: 50.63;
+                       mapcenterlon: 5.56">
+</div>
+    </div>
 
 Bootstrap the JS environment for pattern development
 ----------------------------------------------------
@@ -41,7 +52,7 @@ In watch mode::
     $ make test pattern=pattern-leaflet
 
 Only once::
-    
+
     $ make test-once pattern=pattern-leaflet
 
 In Google Chrome browser::
@@ -69,4 +80,3 @@ are doing).
 For Plone::
 
     $ make plone
-

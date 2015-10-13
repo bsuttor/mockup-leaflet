@@ -35,20 +35,22 @@ define([
     name: 'leaflet',
     trigger: '.pat-leaflet',  // has to be exact like this: 'pat-' + patternname.
     defaults: {
-      mapcenter: [50.636, 5.566],
-      mapzoom: 13
+      mapcenterlat: "50.636",
+      mapcenterlon: "5.566",
+      mapzoom: "13"
     },
     init: function () {
       var self = this,
         $el = self.$el,
         map,
         baseLayers,
-        mapcenter = self.options.mapcenter,
+        mapcenterlat = self.options.mapcenterlat,
+        mapcenterlon = self.options.mapcenterlon,
         mapzoom = self.options.mapzoom;
 
       //debugger;
       map = new L.map($el[0]);
-      map.setView(mapcenter, mapzoom);
+      map.setView([mapcenterlat, mapcenterlon], mapzoom);
 
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
