@@ -34,7 +34,8 @@
   	"less": "~1.7.0",
     "mocha": "~2.2.4",
     "phantomjs": "^1.9.18",
-    "requirejs": "~2.1.17"
+    "requirejs": "~2.1.17",
+    "leaflet": "0.7.5"
   },
   "maintainers": [
     {
