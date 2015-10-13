@@ -1,0 +1,43 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:plone="http://namespaces.plone.org/plone"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:gs="http://namespaces.zope.org/genericsetup"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <include package="plone.resource" file="meta.zcml"/>
+
+  <plone:static
+      directory="js"
+      type="plone"
+      name="leaflet"
+      />
+
+  <browser:resourceDirectory
+      directory="js"
+      name="leaflet"
+      />
+
+  <browser:page
+      name="leafletdemo"
+      for="*"
+      template="leafletdemo.pt"
+      permission="zope2.View"
+      />
+
+<gs:registerProfile
+    name="default"
+    title="mockup.leaflet Plone 5 Install"
+    directory="profiles/default"
+    description="Mockup Leaflet : installation"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+<gs:registerProfile
+    name="uninstall"
+    title="mockup.leaflet Plone 5 Uninstall"
+    directory="profiles/uninstall"
+    description="Mockup Leaflet : uninstallation"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+</configure>

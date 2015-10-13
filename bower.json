@@ -1,0 +1,20 @@
+{
+  "name": "mockup-leaflet",
+  "description": "Leaflet integration into Plone with Mockup",
+  "dependencies": {
+    "mockup": "master",
+    "leaflet": "https://github.com/Leaflet/Leaflet/archive/v0.7.5.zip"
+  },
+  "devDependencies": {
+    "expect": "0.3.1",
+    "sinonjs": "1.10.2"
+  },
+  "resolutions": {
+    "bootstrap": "3.3.4",
+    "jquery": "1.11.3",
+    "select2": "3.5.1",
+    "moment": "2.10.3",
+    "patternslib": "master",
+    "parsleyjs": "1.2.4"
+  }
+}
