@@ -1,10 +1,9 @@
-A minimal pattern for mockup
+A Leaflet pattern for mockup
 ============================
 
-This is a minimal pattern for mockup. It does not much, except changing the
-html contents of a DOM element with a configurable test.
-It can be used to learn about mockup, the source code is annotated with
-comments.
+http://leafletjs.com/
+
+This is a Leaflet pattern for mockup. This package build from https://github.com/collective/mockup-minimalpattern
 
 
 Bootstrap the JS environment for pattern development
@@ -18,12 +17,18 @@ Then::
     $ cd mockup-leaflet
     $ make bootstrap
 
-Create the bundles (needed for development and Plone 4. For integration in
-Plone 5, the bundle can be compiled through the web)::
+Create the bundles::
+
+- Install Plone site with mockup-leaflet
+- Go to http://localhost:8080/Plone/@@resourceregistry-controlpanel
+- Build leaflet bundle
+- Try demo page http://localhost:8080/Plone/leafletdemo
+
+
+
+You can also try (but it's not working at this moment)::
 
     $ make bundle-leaflet
-
-Then::
 
     $ python -m SimpleHTTPServer
     $ chrome http://localhost:8000
@@ -61,10 +66,7 @@ are doing).
     The make targets to bootstrap Plone erase the ``var`` directory! You will
     loose any changes made to your Plone database.
 
-For Plone 5::
+For Plone::
 
     $ make plone
 
-For Plone 4::
-
-    $ make plone4
