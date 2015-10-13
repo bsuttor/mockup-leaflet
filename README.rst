@@ -10,11 +10,10 @@ Options
 
 You can use options like this::
 
-<div class="pat-leaflet"
-     data-pat-leaflet="mapzoom: 12;
-                       mapcenterlat: 50.63;
-                       mapcenterlon: 5.56">
-</div>
+    <div class="pat-leaflet"
+         data-pat-leaflet="mapzoom: 12;
+                           mapcenterlat: 50.63;
+                           mapcenterlon: 5.56">
     </div>
 
 Bootstrap the JS environment for pattern development
