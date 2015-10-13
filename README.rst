@@ -17,7 +17,7 @@ Then::
     $ cd mockup-leaflet
     $ make bootstrap
 
-Create the bundles::
+Create the bundles:
 
 - Install Plone site with mockup-leaflet
 - Go to http://localhost:8080/Plone/@@resourceregistry-controlpanel
