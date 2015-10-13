@@ -37,8 +37,8 @@ cleanplone:
 plone: cleanplone
 	# Install Plone 5
 	virtualenv-2.7 .
-	./bin/pip install zc.buildout
-	./bin/buildout
+	./bin/python bootstrap.py
+	./bin/buildout -N
 
 bundle-leaflet:
 	# Build leaflet bundle
