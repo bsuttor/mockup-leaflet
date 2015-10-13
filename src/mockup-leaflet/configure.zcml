@@ -12,6 +12,12 @@
       name="leaflet"
       />
 
+  <plone:static
+      directory="js/bower_components/leaflet/dist"
+      type="plone"
+      name="leaflet-dist"
+      />
+
   <browser:resourceDirectory
       directory="js"
       name="leaflet"
